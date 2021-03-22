@@ -18,10 +18,10 @@ namespace Common.Models
         }
 
         public virtual DbSet<Curso> Cursos { get; set; }
-        public virtual DbSet<Direccion> Direccions { get; set; }
+        public virtual DbSet<Direccion> Direcciones { get; set; }
         public virtual DbSet<Estudiante> Estudiantes { get; set; }
         public virtual DbSet<EstudianteCurso> EstudianteCursos { get; set; }
-        public virtual DbSet<EstudianteDireccion> EstudianteDireccions { get; set; }
+        public virtual DbSet<EstudianteDireccion> EstudianteDirecciones { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
