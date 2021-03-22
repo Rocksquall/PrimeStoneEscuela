@@ -1,0 +1,37 @@
+﻿@model List<PrimeStone.Models.EstudianteModel>
+@{
+    ViewData["Title"] = "Estudiantes";
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    <table class="table">
+        <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Edad</th>
+            <th class="text-center">Teléfono</th>
+            <th class="text-center"></th>
+        </tr>
+        @foreach (var estudiante in Model)
+        {
+    <tr>
+        <td class="text-center">@estudiante.Id</td>
+        <td class="text-center">@estudiante.Nombre</td>
+        <td class="text-center">@estudiante.Edad</td>
+        <td class="text-center">@estudiante.Telefono</td>
+
+        <td>
+            <a href="~/estudiante/editar/@estudiante.Id" class="btn btn-primary">Editar</a>
+            <a href="~/estudiante/eliminar/@estudiante.Id" class="btn btn-danger">Eliminar</a>
+        </td>
+    </tr>
+
+        }
+
+    </table>
+    <div class="text-right">
+        <a href="~/estudiante/crear" class="btn btn-success">Crear Nuevo Estudiante</a>
+    </div>
+
+</div>

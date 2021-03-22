@@ -1,0 +1,32 @@
+﻿@model List<PrimeStone.Models.DireccionModel>
+@{
+    ViewData["Title"] = "Direcciones";
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    <p> En esta vista se implemento el servicio con Timer, que agrega una direccion aleatoria cada 10 segs realizada en IHostedService </p>
+    <table class="table">
+        <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">Direccion</th>
+        </tr>
+        @foreach (var direccion in Model)
+        {
+            <tr>
+                <td class="text-center">@direccion.Id</td>
+                <td class="text-center">@direccion.Nombre</td>
+                <td>
+                    <a href="~/direccion/editar/@direccion.Id" class="btn btn-primary">Editar</a>
+                    <a href="~/direccion/eliminar/@direccion.Id" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+
+        }
+
+    </table>
+    <div class="text-right">
+        <a href="~/direccion/crear" class="btn btn-success">Nueva direccion</a>
+    </div>
+
+</div>

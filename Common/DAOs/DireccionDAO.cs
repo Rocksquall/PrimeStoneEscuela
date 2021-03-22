@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Common.DAOs
 {
-    class DireccionDAO
+    public class DireccionDAO
     {
 
         // Leer Direcciones

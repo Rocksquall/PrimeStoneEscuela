@@ -9,7 +9,7 @@ using Modelos.DTOs;
 
 namespace Common.DAOs
 {
-    class CursoDAO
+   public class CursoDAO
     {
 
         //Leer Curso

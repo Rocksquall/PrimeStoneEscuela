@@ -1,0 +1,21 @@
+﻿@model PrimeStone.Models.DireccionModel;
+@{
+    ViewData["Title"] = "Crear Direccion";
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<div class="row">
+
+    @using (Html.BeginForm("Crear", "direccion", FormMethod.Post))
+    {
+        @Html.LabelFor(m => m.Nombre)
+        @Html.TextBoxFor(m => m.Nombre, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nombre, null, new { @class = "red" })
+        <hr />
+        <div>
+            <input type="submit" class="btn btn-success" value="Guardar" />
+        </div>
+    }
+
+</div>

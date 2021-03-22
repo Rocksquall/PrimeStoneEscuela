@@ -1,0 +1,29 @@
+﻿@model PrimeStone.Models.EstudianteModel;
+@{
+    ViewData["Title"] = "Editar Estudiante";
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<div class="row">
+
+    @using (Html.BeginForm("Editar", "Estudiante", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.Id)
+        @Html.LabelFor(m => m.Nombre)
+        @Html.TextBoxFor(m => m.Nombre, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nombre, null, new { @class = "red" })
+        @Html.LabelFor(m => m.Edad)
+        @Html.TextBoxFor(m => m.Edad, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Edad, null, new { @class = "red" })
+        @Html.LabelFor(m => m.Telefono)
+        @Html.TextBoxFor(m => m.Telefono, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Telefono, null, new { @class = "red" })
+
+        <hr />
+        <div>
+            <input type="submit" class="btn btn-primary" value="Guardar" />
+        </div>
+    }
+
+</div>

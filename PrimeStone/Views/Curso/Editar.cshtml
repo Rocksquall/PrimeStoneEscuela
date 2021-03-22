@@ -1,0 +1,35 @@
+﻿@model PrimeStone.Models.CursoModel;
+@{
+    ViewData["Title"] = "Editar Curso";
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<div class="row">
+
+    @using (Html.BeginForm("Editar", "curso", FormMethod.Post))
+    {
+        @Html.LabelFor(m => m.Nombre)
+        @Html.TextBoxFor(m => m.Nombre, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nombre, null, new { @class = "red" })
+        @Html.LabelFor(m => m.Tiempo)
+        @Html.TextBoxFor(m => m.Tiempo, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Tiempo, null, new { @class = "red" })
+        @Html.LabelFor(m => m.FechaInicio)
+        <br />
+        @Html.EditorFor(m => m.FechaInicio, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FechaInicio, null, new { @class = "red" })
+        <br />
+        @Html.LabelFor(m => m.FechaFin)
+        <br />
+        @Html.EditorFor(m => m.FechaFin, null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FechaFin, null, new { @class = "red" })
+        <hr />
+        <div>
+            <input type="submit" class="btn btn-success" value="Guardar" />
+        </div>
+    }
+
+</div>
+
+</div>
